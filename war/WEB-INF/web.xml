@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	
+	<!--display-name>EJERCICIO GAE 01 MODELO-VISTA-CONTROLADOR</display-name>
+  	<description> XML de configuracion para aplicar el patron MVC en JSP</description>
+	<context-param>
+        <param-name>ABSOLUTEURL</param-name>
+        <param-value>http://localhost:8888/</param-value>
+    </context-param-->
+	<servlet>
+		<servlet-name>controlador</servlet-name>
+		<servlet-class>com.ms.gae.controller.Controller</servlet-class>
+	</servlet>
+	<!-- Mapping  -->
+	<servlet-mapping>
+        <servlet-name>controlador</servlet-name>
+        <url-pattern>/servlet/*</url-pattern>
+    </servlet-mapping>
+	<!-- Seguridad y autenticacion con cuenta de google >
+	 <security-constraint> 
+        <web-resource-collection> 
+            <web-resource-name> profile </web-resource-name> 
+           <url-pattern> /profile/* </url-pattern> 
+        </web-resource-collection> 
+        <auth-constraint> 
+            <role-name> * </role-name> 
+        </auth-constraint> 
+    </security-constraint> 
+
+    <security-constraint> 
+        <web-resource-collection> 
+           <web-resource-name> admin </web-resource-name> 
+            <url-pattern> /admin/* </url-pattern> 
+        </web-resource-collection> 
+        <auth-constraint> 
+            <role-name> admin </role-name> 
+        </auth-constraint> 
+    </security-constraint-->
+	
+    <!-- Index -->
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	
+</web-app>
